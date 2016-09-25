@@ -1,0 +1,23 @@
+The website uses the Phalcon php framework, these are the full instructions for developing
+1. install bitnami wampstack, or xampp (or any other php & mysql distribution)
+2. download the correct Phalcon dll for your environment from https://phalconphp.com/en/download/windows 
+	Note: If installing on Linux, follow the instructions at https://phalconphp.com/en/download
+	
+3. Add the dll download into the php folder of your web stack, in php/ext
+4. In the file php/php.ini, add the line 
+
+		extension=php_phalcon.dll
+		
+	Immediately above the module settings (they start like this)
+	
+	extension=php_phalcon.dll
+	;;;;;;;;;;;;;;;;;;;
+	; Module Settings ;
+	;;;;;;;;;;;;;;;;;;;
+	
+5. Restart your webserver
+6. If you don't have it, get the php eclipse download or plugin
+
+7. clone the git repository into the htdocs folder of your webserver
+
+8. Debug instructions and more specific details on cloning to come once we work out the structure of the app
