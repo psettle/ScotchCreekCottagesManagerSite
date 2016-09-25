@@ -16,8 +16,22 @@ The website uses the Phalcon php framework, these are the full instructions for 
 	;;;;;;;;;;;;;;;;;;;
 	
 5. Restart your webserver
-6. If you don't have it, get the php eclipse download or plugin
 
-7. clone the git repository into the htdocs folder of your webserver
+6. clone the git repository into the htdocs folder of your webserver
+   
+   Its should end up at htdocs/ScotchCreekCottagesManagerSite
+   
+7. Take the example.htaccess_example file, rename it as ".htaccess" and place it in 
+   the root directory of your webserver (Note that if your webserver will be handling multiple sites,
+   you will need to alter the .htaccess file and place it in htdocs/ScotchCreekCottagesManagerSite instead)
+   
+8. The site should be up and running now! you can test this by navigating to localhost (add the correct port if your server isn't on 80)
 
-8. Debug instructions and more specific details on cloning to come once we work out the structure of the app
+9.To begin developing with eclipse, follow the remaining steps
+
+10. If you don't have it, get the php eclipse download or plugin
+
+11. Create a new php project, the name doesn't matter
+12. Delete the project, without deleting the contents on disk
+13. Copy/Paste the contents of the project folder into htdocs/ScotchCreekCottagesManagerSite
+14. Use the eclipse "Import Project" feature to add the web application as a project
