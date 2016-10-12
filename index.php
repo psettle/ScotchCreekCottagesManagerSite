@@ -31,8 +31,8 @@ use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 $loader = new Loader();
 
 $loader->registerDirs (array(
-		'controllers/',
-		'models/',
+		'src/controllers/',
+		'src/models/',
 ));
 
 $loader->register();
@@ -71,7 +71,7 @@ $di->set(
 			return new DbAdapter(array(
 					'host' => '127.0.0.1',
 					'username' => 'root',
-					'password' => 'abc123',
+					'password' => '',
 					'dbname' => 'phalcon_db'
 
 			));
