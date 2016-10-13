@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond   %{REQUEST_URI} !ScotchCreekCottagesManagerSite/src/public
+RewriteRule   ^((?s).*)$ ScotchCreekCottagesManagerSite/index.php?_url=/$1 [QSA,L]
