@@ -5,8 +5,10 @@ use Phalcon\Mvc\Application;
 use Phalcon\Di\FactoryDefault as Settings;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\Url as UrlProvider;
+include 'src/database/DBTableInstance.php';
 
-
+//uncomment install if db isn't working
+//install();
 main();
 
 /**
@@ -73,6 +75,11 @@ function handleRequest($settings) {
 	//create an app with the settings
 	$application = new Application($settings);
 	
+	//example of use, SDADS and ADF go into the first and second ? respectively,
+	//it might throw a DBException if there is a connection or syntax error
+	//the resulting rows are stored in $result
+	
+	//$result = query("SELECT * FROM users WHERE username = ? AND email = ?", array('SDADS', 'ADF'));
 	
 	try {
 		//handle the request and sends the response back
@@ -85,6 +92,12 @@ function handleRequest($settings) {
 	}
 }
 
+function install() {
+	//put your own credentials here to install first, this doesn't need to run
+	//every time so we'll probably make an install script or something like that
+	//note: 127.0.0.1 runs faster than localhost
+	DBQuery::saveConnectionCredentials('127.0.0.1', 'root', 'abc123', 'phalcon_db');
+}
 
 
 
