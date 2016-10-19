@@ -13,6 +13,7 @@ include 'DBException.php';
  * 		Supplimental arguments to the query, to prevent injection
  * @return mixed
  * 		The result of the query
+ * 
  */
 function query($query, $args = array()) {
 	$DBQuery = new DBQuery();
