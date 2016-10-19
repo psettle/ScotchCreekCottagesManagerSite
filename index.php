@@ -9,7 +9,6 @@ include 'src/database/DBTableInstance.php';
 
 //uncomment install if db isn't working
 //install();
-//run the program
 main();
 
 /**
